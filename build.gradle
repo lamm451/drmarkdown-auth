@@ -26,13 +26,24 @@ task fatJar(type: Jar) {
 	with jar
 }
 
+bootJar {
+	mainClassName = 'com.drmarkdown.auth.AuthApplication'
+}
+
+bootRun {
+	main = 'com.drmarkdown.auth.AuthApplication'
+}
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'java'
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

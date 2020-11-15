@@ -1,0 +1,8 @@
+
+https://github.com/lamm451/drmarkdown-auth.git
+
+ docker run -d --name my-mongo -e MONGO_INITDB_ROOT_USERNAME=boss -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017   mongo
+
+
+ mongo mongodb://localhost:27017/admin -u boss -p password
+
